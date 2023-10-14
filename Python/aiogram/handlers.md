@@ -6,7 +6,9 @@
 
 @dp.my_chat_member(ChatMemberUpdatedFilter(member_status_changed=KICKED))
 async def process_user_blocked_bot(event: ChatMemberUpdated):
+
     print(f'Пользователь {event.from_user.id} заблокировал бота')
+
 проверка на заблокировали ли бота 
 
 @dp.message(F.content_type.in_({'voice', 'video', 'text'}))
@@ -14,7 +16,7 @@ async def process_user_blocked_bot(event: ChatMemberUpdated):
 
 @dp.message(F.content_type.in_({ContentType.VOICE,ContentType.VIDEO,ContentType.TEXT}))
 2 вариант несколько 
-
+___
 handlers
 @dp.message(CommandStart())
 команда /start
