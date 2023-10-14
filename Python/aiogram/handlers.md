@@ -1,57 +1,57 @@
-прикольные фишки
-@dp.message(Command(commands='start', prefix='|')) - можно поставить вместо / , все что угодно 
+**прикольные фишки**
+```python
+@dp.message(Command(commands='start', prefix='|')) #можно поставить вместо / , все что угодно 
 
-@dp.message(Command(commands=["start"]))
-команды
+@dp.message(Command(commands=["start"]))    #команды
 
 @dp.my_chat_member(ChatMemberUpdatedFilter(member_status_changed=KICKED))
 async def process_user_blocked_bot(event: ChatMemberUpdated):
+    print(f'Пользователь {event.from_user.id} заблокировал бота')   #проверка на заблокировали ли бота 
 
-    print(f'Пользователь {event.from_user.id} заблокировал бота')
 
-проверка на заблокировали ли бота 
 
-@dp.message(F.content_type.in_({'voice', 'video', 'text'}))
-1 вариант несколько
+@dp.message(F.content_type.in_({'voice', 'video', 'text'}))  #1 вариант несколько
 
-@dp.message(F.content_type.in_({ContentType.VOICE,ContentType.VIDEO,ContentType.TEXT}))
-2 вариант несколько 
+
+@dp.message(F.content_type.in_({ContentType.VOICE,ContentType.VIDEO,ContentType.TEXT})) 2 вариант несколько 
+```
 ___
-handlers
-@dp.message(CommandStart())
-команда /start
+***handlers***
+```python
+@dp.message(CommandStart()) #команда /start
 
-@dp.message()
-все
 
-@dp.message(F.content_type == ContentType.PHOTO)
-фото
+@dp.message() #все
 
-@dp.message(F.content_type == ContentType.TEXT)
-текст 
+@dp.message(F.content_type == ContentType.PHOTO) #фото
 
-@dp.message(F.content_type == ContentType.DOCUMENT)
-документ
 
-@dp.message(F.content_type == ContentType.STICKER)
-стикер 
+@dp.message(F.content_type == ContentType.TEXT) #текст 
 
-@dp.message(F.content_type == ContentType.VIDEO)
-видео 
 
-@dp.message(F.content_type == ContentType.VIDEO_NOTE)
-видео сообщения(кружочки)
+@dp.message(F.content_type == ContentType.DOCUMENT) #документ
 
-@dp.message(F.content_type == ContentType.VOICE)
-голосовые сообщения 
 
-@dp.message(F.content_type == ContentType.LOCATION)
-местоположение 
+@dp.message(F.content_type == ContentType.STICKER) #стикер 
 
-@dp.message(F.content_type == ContentType.CONTACT)
-контакт 
 
-@dp.message(F.content_type == ContentType."...")
+@dp.message(F.content_type == ContentType.VIDEO) # видео 
+
+
+@dp.message(F.content_type == ContentType.VIDEO_NOTE) # видео сообщения(кружочки)
+
+
+@dp.message(F.content_type == ContentType.VOICE) # голосовые сообщения 
+
+
+@dp.message(F.content_type == ContentType.LOCATION) #местоположение 
+
+
+@dp.message(F.content_type == ContentType.CONTACT) #контакт 
+```
+```
+@dp.message(F.content_type == ContentType."...") #и тд
+
 - ANIMATION - анимация (GIF)
 - VENUE - место проведения
 - POLL - опрос
@@ -76,7 +76,8 @@ handlers
 - VOICE_CHAT_STARTED - началась голосовая беседа
 - VOICE_CHAT_ENDED - завершилась голосовая беседа
 - VOICE_CHAT_PARTICIPANTS_INVITED - приглашены участники голосовой беседы
-
-
+```
+```
 documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/api/enums/content_type.html#module-aiogram.enums.content_type - типы 
 documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/dispatcher/filters/chat_member_updated.html - статусы 
+```
