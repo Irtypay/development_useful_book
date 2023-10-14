@@ -13,7 +13,7 @@ async def process_user_blocked_bot(event: ChatMemberUpdated):
 @dp.message(F.content_type.in_({'voice', 'video', 'text'}))  #1 вариант несколько
 
 
-@dp.message(F.content_type.in_({ContentType.VOICE,ContentType.VIDEO,ContentType.TEXT})) 2 вариант несколько 
+@dp.message(F.content_type.in_({ContentType.VOICE,ContentType.VIDEO,ContentType.TEXT})) #2 вариант несколько 
 ```
 ___
 ***handlers***
@@ -49,8 +49,9 @@ ___
 
 @dp.message(F.content_type == ContentType.CONTACT) #контакт 
 ```
-```
+```python
 @dp.message(F.content_type == ContentType."...") #и тд
+```
 
 - ANIMATION - анимация (GIF)
 - VENUE - место проведения
@@ -76,7 +77,7 @@ ___
 - VOICE_CHAT_STARTED - началась голосовая беседа
 - VOICE_CHAT_ENDED - завершилась голосовая беседа
 - VOICE_CHAT_PARTICIPANTS_INVITED - приглашены участники голосовой беседы
-```
+
 ```
 documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/api/enums/content_type.html#module-aiogram.enums.content_type - типы 
 documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/dispatcher/filters/chat_member_updated.html - статусы 
