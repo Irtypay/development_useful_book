@@ -49,6 +49,7 @@ ___
 
 @dp.message(F.content_type == ContentType.CONTACT) #контакт 
 ```
+___
 ```python
 @dp.message(F.content_type == ContentType."...") #и тд
 ```
@@ -77,8 +78,7 @@ ___
 - VOICE_CHAT_STARTED - началась голосовая беседа
 - VOICE_CHAT_ENDED - завершилась голосовая беседа
 - VOICE_CHAT_PARTICIPANTS_INVITED - приглашены участники голосовой беседы
+___
 
-```
-documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/api/enums/content_type.html#module-aiogram.enums.content_type - типы 
-documentation aiogram : https://docs.aiogram.dev/en/dev-3.x/dispatcher/filters/chat_member_updated.html - статусы 
-```
+[documentation aiogram](https://docs.aiogram.dev/en/dev-3.x/api/enums/content_type.html#module-aiogram.enums.content_type) - типы 
+[documentation aiogram](https://docs.aiogram.dev/en/dev-3.x/dispatcher/filters/chat_member_updated.html) - статусы 
