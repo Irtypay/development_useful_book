@@ -50,8 +50,9 @@ ___
 @dp.message(F.content_type == ContentType.CONTACT) #контакт 
 ```
 ___
+***и так далее***
 ```python
-@dp.message(F.content_type == ContentType."...") #и тд
+@dp.message(F.content_type == ContentType."...") 
 ```
 
 - ANIMATION - анимация (GIF)
@@ -81,4 +82,5 @@ ___
 ___
 
 [documentation aiogram](https://docs.aiogram.dev/en/dev-3.x/api/enums/content_type.html#module-aiogram.enums.content_type) - типы 
+
 [documentation aiogram](https://docs.aiogram.dev/en/dev-3.x/dispatcher/filters/chat_member_updated.html) - статусы 
