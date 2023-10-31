@@ -1,4 +1,4 @@
-***answrer***
+***answer***
 ```python
 await message.reply_photo()
 
